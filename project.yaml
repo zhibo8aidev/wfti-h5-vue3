@@ -1,8 +1,8 @@
 project_id: wfti-h5-vue3
 title: 世界杯球迷人格大鉴赏（WFTI）H5 活动
 client_target: both
-current_stage: design_review
-stage_status: waiting_review
+current_stage: tech_design_tasks
+stage_status: in_progress
 source_inputs:
   idea: 开发一个手机端 Vue3 H5 活动，承接 2026 世界杯赛期流量，包含落地页、16 题答题页、2.5 秒结果计算过渡页、结果页、分享海报，前端完成人格算法并异步上报结果。
   existing_prd:
@@ -22,8 +22,7 @@ available_artifacts:
   backend_code: false
   test_report: false
   release_plan: false
-pending_reviews:
-- design_review
+pending_reviews: []
 openspec_change_id: null
 react_native_mockups:
   status: ready_for_review
@@ -89,18 +88,17 @@ execution_policy:
     - design.md
     - tasks.md
 next_actions:
-- Wait for explicit design approval
+- Produce and review tasks.md
 orchestration_mode: strong
 validation:
   required_handoffs:
-  - designer -> leader
-  required_runs:
-  - ACP Gemini design run
-  artifact_origin_verified: true
+  - leader -> frontend/backend
+  required_runs: []
+  artifact_origin_verified: false
   last_validation_note: null
 last_decision:
-  stage: prd_review
+  stage: design_review
   decision: approved
   by: ou_521ffbb317443d4b0bd6c2fd89887af7
-  at: '2026-04-27T14:52:34'
-  note: 'Feishu group approval: approve PRD/specs and advance to design'
+  at: '2026-04-27T15:05:42'
+  note: 'Feishu group approval: approve design and advance to tech design/tasks'
