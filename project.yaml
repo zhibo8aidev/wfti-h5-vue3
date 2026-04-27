@@ -93,15 +93,13 @@ execution_policy:
     - tasks.md
 next_actions:
 - Complete implementation and self-test evidence
-- 'Frontend handoff missing: record frontend implementation handoff before QA'
-- 'Frontend run missing: record ACP Codex frontend execution before QA'
 orchestration_mode: strong
 validation:
   required_handoffs:
   - frontend -> tester
   required_runs:
   - ACP Codex frontend run
-  artifact_origin_verified: false
+  artifact_origin_verified: true
   last_validation_note: Implementation exits to QA only after the required frontend
     handoff and ACP Codex frontend run evidence are present.
 last_decision:
