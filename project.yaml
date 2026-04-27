@@ -1,18 +1,19 @@
 project_id: wfti-h5-vue3
 title: 世界杯球迷人格大鉴赏（WFTI）H5 活动
 client_target: both
-current_stage: proposal_specs
-stage_status: in_progress
+current_stage: prd_review
+stage_status: waiting_review
 source_inputs:
   idea: 开发一个手机端 Vue3 H5 活动，承接 2026 世界杯赛期流量，包含落地页、16 题答题页、2.5 秒结果计算过渡页、结果页、分享海报，前端完成人格算法并异步上报结果。
   existing_prd:
   - /home/chenhuiming/.openclaw/projects/wfti-h5-vue3/artifacts/source-prd/user-brief.md
   - /home/chenhuiming/.openclaw/projects/wfti-h5-vue3/artifacts/source-prd/question-bank.md
+  - /home/chenhuiming/.openclaw/projects/wfti-h5-vue3/artifacts/source-prd/persona-dataset.md
   existing_design: []
   existing_repo: []
 available_artifacts:
-  proposal_md: false
-  specs_dir: false
+  proposal_md: true
+  specs_dir: true
   design_md: false
   react_native_mockups: false
   tasks_md: false
@@ -20,7 +21,8 @@ available_artifacts:
   backend_code: false
   test_report: false
   release_plan: false
-pending_reviews: []
+pending_reviews:
+- prd_review
 openspec_change_id: null
 react_native_mockups:
   status: null
@@ -83,13 +85,12 @@ execution_policy:
     - design.md
     - tasks.md
 next_actions:
-- Generate or import proposal.md and specs/
+- Wait for explicit PRD/specs approval
 orchestration_mode: strong
 validation:
-  required_handoffs:
-  - product -> leader
+  required_handoffs: []
   required_runs: []
-  artifact_origin_verified: false
+  artifact_origin_verified: true
   last_validation_note: null
 last_decision:
   stage: null
