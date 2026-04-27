@@ -97,8 +97,10 @@ validation:
   artifact_origin_verified: true
   last_validation_note: null
 last_decision:
-  stage: design_review
-  decision: approved
+  stage: tech_review
+  decision: rejected
   by: ou_521ffbb317443d4b0bd6c2fd89887af7
-  at: '2026-04-27T15:05:42'
-  note: 'Feishu group approval: approve design and advance to tech design/tasks'
+  at: '2026-04-27T15:13:40'
+  note: 'Scope updated during tech_review: this project should be frontend-only. Question
+    bank, rules, and personality calculation stay fully on the front end. Remove backend
+    APIs, persistence, and backend implementation tasks from technical design/tasks.'
