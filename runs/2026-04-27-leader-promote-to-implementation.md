@@ -19,3 +19,10 @@
 
 ## Result
 Project advanced to implementation and frontend execution can start. Backend execution is disabled for this project.
+
+## ACP Execution
+- Runtime: ACP
+- Agent: Codex
+- Child session: `agent:codex:acp:a76320d6-b273-4f92-8ccc-0445924397b7`
+- Run ID: `7297534c-9070-4d85-839f-acbe23edcd1b`
+- Stream log: `/home/chenhuiming/.openclaw/agents/codex/sessions/ac0d9943-2166-4a20-83a1-b8d174d3090b.acp-stream.jsonl`
