@@ -2,7 +2,7 @@ project_id: wfti-h5-vue3
 title: 世界杯球迷人格大鉴赏（WFTI）H5 活动
 client_target: both
 current_stage: implementation
-stage_status: blocked
+stage_status: in_progress
 source_inputs:
   idea: 开发一个手机端 Vue3 H5 活动，承接 2026 世界杯赛期流量，包含落地页、16 题答题页、2.5 秒结果计算过渡页、结果页、分享海报，题库、人格算法与结果展示全部由前端本地完成。
   existing_prd:
@@ -92,6 +92,7 @@ execution_policy:
     - design.md
     - tasks.md
 next_actions:
+- Complete implementation and self-test evidence
 - 'Frontend handoff missing: record frontend implementation handoff before QA'
 - 'Frontend run missing: record ACP Codex frontend execution before QA'
 orchestration_mode: strong
@@ -101,8 +102,8 @@ validation:
   required_runs:
   - ACP Codex frontend run
   artifact_origin_verified: false
-  last_validation_note: Implementation artifacts are not promotable without the required
-    frontend handoff and ACP Codex frontend run evidence.
+  last_validation_note: Implementation exits to QA only after the required frontend
+    handoff and ACP Codex frontend run evidence are present.
 last_decision:
   stage: tech_review
   decision: approved
