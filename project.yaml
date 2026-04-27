@@ -4,12 +4,13 @@ client_target: both
 current_stage: tech_review
 stage_status: waiting_review
 source_inputs:
-  idea: 开发一个手机端 Vue3 H5 活动，承接 2026 世界杯赛期流量，包含落地页、16 题答题页、2.5 秒结果计算过渡页、结果页、分享海报，前端完成人格算法并异步上报结果。
+  idea: 开发一个手机端 Vue3 H5 活动，承接 2026 世界杯赛期流量，包含落地页、16 题答题页、2.5 秒结果计算过渡页、结果页、分享海报，题库、人格算法与结果展示全部由前端本地完成。
   existing_prd:
   - /home/chenhuiming/.openclaw/projects/wfti-h5-vue3/artifacts/source-prd/user-brief.md
   - /home/chenhuiming/.openclaw/projects/wfti-h5-vue3/artifacts/source-prd/question-bank.md
   - /home/chenhuiming/.openclaw/projects/wfti-h5-vue3/artifacts/source-prd/persona-dataset.md
   - /home/chenhuiming/.openclaw/projects/wfti-h5-vue3/artifacts/source-prd/algorithm-and-persona-canonical.md
+  - /home/chenhuiming/.openclaw/projects/wfti-h5-vue3/artifacts/source-prd/frontend-only-scope.md
   existing_design: []
   existing_repo: []
 available_artifacts:
@@ -57,6 +58,9 @@ owners:
   backend: backend
   tester: tester
   devops: devops
+delivery_scope:
+  frontend: true
+  backend: false
 execution_policy:
   design:
     runtime: acp
