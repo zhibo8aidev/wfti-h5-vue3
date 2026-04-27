@@ -34,13 +34,13 @@
    - 封装 `【待桥接确认】` 宿主能力，保证主链路可先用 mock 跑通
 
 ## 3. 页面主链路
-1. Landing 初始化活动静态配置、登录态、最近本地结果摘要
-2. 未登录点击开始测试时，通过 `bridge.ensureLogin()` 拉起登录（若业务仍要求登录）
+1. Landing 初始化活动静态配置、最近本地结果摘要
+2. 点击开始测试直接进入 Quiz 主链路
 3. Quiz 页按固定顺序作答，支持回退和 24 小时断点续答
 4. 第 16 题后进入 2.5 秒 calculating 页
 5. `personalityEngine` 本地计算人格结果
 6. Result 页渲染本地结果，并写入 `saveLatestLocalResult()`
-7. 分享 / 保存走 `posterService + bridge` 组合链路
+7. 分享 / 保存相册 / 站内跳转入口保留 UI，点击统一提示 `待开发`
 8. 重新预测时清理草稿并覆盖本地最近结果
 
 ## 4. 状态模型
@@ -130,14 +130,14 @@
 - 海报生成时隐藏底部操作栏
 
 ## 7. bridge 与本地仓储边界
-### 7.1 bridge 能力
-- `ensureLogin()`
-- `share()`
-- `saveImage()`
-- `openRoute()`
-- `getEnv()`
+### 7.1 占位能力
+- `ensureLogin()` -> toast `待开发`
+- `share()` -> toast `待开发`
+- `saveImage()` -> toast `待开发`
+- `openRoute()` -> toast `待开发`
+- `getEnv()` -> 可选读取宿主信息，缺失时使用前端默认值
 
-全部通过 `bridge adapter` 封装，未确认协议先用 web mock 实现。
+全部通过统一 `bridge adapter` 封装，当前实现不接真实 bridge 协议。
 
 ### 7.2 localRepository 接口
 - `getLatestLocalResult()`
@@ -167,12 +167,12 @@
 1. 先搭工程骨架、状态管理、设计 token
 2. 再落题库与算法单测
 3. 实现 landing / quiz / calculating / result 主链路
-4. 补雷达图、关系链、海报、二维码与 bridge 适配
+4. 补雷达图、关系链、海报预览、二维码与占位交互
 5. 完成埋点、异常态与多机型回归
 
 ## 10. 当前阻塞与建议
-- `【待桥接确认】`：登录、分享、保存图片、站内跳转协议
-- 这些都可通过 adapter/mock 收口，不阻塞当前前端实现
+- 登录、分享、保存图片、站内跳转本期不做真实集成，统一按占位入口处理
+- 因此当前无 bridge 阻塞项，不影响前端主链路落地
 
 ## 11. 结论
-当前项目已经明确为前端单体实现。技术评审通过后，只需启动前端实现，不再拆分 backend 任务。
+当前项目已经明确为前端单体实现。技术评审通过后，只需启动前端实现，不再拆分 backend 任务，bridge 相关入口统一提示 `待开发`。

@@ -1,8 +1,8 @@
 project_id: wfti-h5-vue3
 title: 世界杯球迷人格大鉴赏（WFTI）H5 活动
 client_target: both
-current_stage: tech_review
-stage_status: waiting_review
+current_stage: implementation
+stage_status: blocked
 source_inputs:
   idea: 开发一个手机端 Vue3 H5 活动，承接 2026 世界杯赛期流量，包含落地页、16 题答题页、2.5 秒结果计算过渡页、结果页、分享海报，题库、人格算法与结果展示全部由前端本地完成。
   existing_prd:
@@ -23,8 +23,7 @@ available_artifacts:
   backend_code: false
   test_report: false
   release_plan: false
-pending_reviews:
-- tech_review
+pending_reviews: []
 openspec_change_id: null
 react_native_mockups:
   status: ready_for_review
@@ -93,18 +92,21 @@ execution_policy:
     - design.md
     - tasks.md
 next_actions:
-- Wait for explicit technical approval
+- 'Frontend handoff missing: record frontend implementation handoff before QA'
+- 'Frontend run missing: record ACP Codex frontend execution before QA'
 orchestration_mode: strong
 validation:
-  required_handoffs: []
-  required_runs: []
-  artifact_origin_verified: true
-  last_validation_note: null
+  required_handoffs:
+  - frontend -> tester
+  required_runs:
+  - ACP Codex frontend run
+  artifact_origin_verified: false
+  last_validation_note: Implementation artifacts are not promotable without the required
+    frontend handoff and ACP Codex frontend run evidence.
 last_decision:
   stage: tech_review
-  decision: rejected
+  decision: approved
   by: ou_521ffbb317443d4b0bd6c2fd89887af7
-  at: '2026-04-27T15:13:40'
-  note: 'Scope updated during tech_review: this project should be frontend-only. Question
-    bank, rules, and personality calculation stay fully on the front end. Remove backend
-    APIs, persistence, and backend implementation tasks from technical design/tasks.'
+  at: '2026-04-27T15:24:05'
+  note: Scope confirmed as frontend-only. Login, share, save-to-album, and in-app
+    routing stay as placeholder entries and should show 待开发 on click.
