@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>世界杯球迷人格大鉴赏</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <!-- 落地页 -->
+        <section id="landing-page" class="page active">
+            <div class="content">
+                <h1 class="title">WFTI</h1>
+                <h2 class="sub-title">世界杯球迷人格大鉴赏</h2>
+                <p class="slogan">你不是在看世界杯，你是在演你自己。</p>
+                <div class="hero-visual">
+                    <!-- 占位图 -->
+                    <div class="football-sphere"></div>
+                </div>
+                <p class="desc">16 道题，3 分钟，测出你的世界杯球迷人格密码</p>
+                <button onclick="showError('活动已结束', '感谢参与，我们下届世界杯再见')" style="opacity: 0.1; font-size: 10px; background: none; border: none;">模拟结束</button>
+                <button onclick="showError('活动即将开始', '敬请期待，开启你的世界杯球迷人格之旅')" style="opacity: 0.1; font-size: 10px; background: none; border: none;">模拟未开始</button>
+            </div>
+            <div class="bottom-cta-area">
+                <button id="start-btn" class="primary-btn">开始鉴赏</button>
+            </div>
+        </section>
+
+        <!-- 答题页 -->
+        <section id="quiz-page" class="page">
+            <div class="progress-container">
+                <div class="progress-bar" id="progress-bar"></div>
+                <span class="progress-text" id="progress-text">1/16</span>
+            </div>
+            <div class="quiz-container">
+                <div class="question-box" id="question-box">
+                    <h3 class="q-title" id="q-title">题目加载中...</h3>
+                    <div class="options" id="options">
+                        <!-- 选项动态插入 -->
+                    </div>
+                </div>
+            </div>
+            <div class="back-btn" id="back-btn" style="display: none;">返回上一题</div>
+        </section>
+
+        <!-- 计算过渡页 -->
+        <section id="transition-page" class="page">
+            <div class="scan-visual">
+                <div class="scanner"></div>
+                <div class="dna-icon">⚽</div>
+            </div>
+            <p class="transition-text">正在分析你的球迷DNA……</p>
+        </section>
+
+        <!-- 结果页 -->
+        <section id="result-page" class="page">
+            <div class="result-scroll-content">
+                <div class="personality-header">
+                    <div class="p-code" id="p-code">GOAT</div>
+                    <div class="p-name" id="p-name">绿茵教父</div>
+                </div>
+                
+                <div class="illustration-area">
+                    <div class="illustration-placeholder">
+                        <div class="tag-cloud" id="tag-cloud">
+                            <span class="tag">硬核支撑</span>
+                            <span class="tag">信仰图腾</span>
+                            <span class="tag">战术大师</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="analysis-card">
+                    <h3>人格解析</h3>
+                    <p id="p-copy">既然认准了这抹颜色，这辈子就跟它死磕到底了。信仰要是不滚烫，那和白开水有什么区别？热爱不需要理由，只需要这一腔跨越时空的孤勇。</p>
+                </div>
+
+                <div class="radar-card">
+                    <h3>球迷 DNA 雷达</h3>
+                    <div class="radar-placeholder">
+                        <!-- 简单 CSS 实现的雷达示意 -->
+                        <div class="radar-web"></div>
+                        <div class="radar-area"></div>
+                    </div>
+                </div>
+
+                <div class="relationship-card">
+                    <div class="rel-item">
+                        <span>球星对照</span>
+                        <div class="rel-avatar">梅西</div>
+                    </div>
+                    <div class="rel-item">
+                        <span>天敌人格</span>
+                        <div class="rel-avatar">SALT</div>
+                    </div>
+                    <div class="rel-item">
+                        <span>最佳拍档</span>
+                        <div class="rel-avatar">FANA</div>
+                    </div>
+                </div>
+
+                <div class="brand-footer">
+                    <img src="https://via.placeholder.com/100x40?text=Zhibo8" alt="直播吧" class="logo">
+                    <div class="qr-area">
+                        <div class="qr-code"></div>
+                        <span>长按或扫码测试</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bottom-action-bar">
+                <button class="secondary-btn" id="save-poster-btn">保存海报</button>
+                <button class="secondary-btn" id="share-card-btn">分享名片</button>
+                <button class="text-link-btn" id="re-test-btn">重新预测</button>
+            </div>
+        </section>
+
+        <!-- 海报生成蒙层 -->
+        <div id="poster-overlay" class="overlay">
+            <div class="poster-container">
+                <div class="poster-content" id="poster-content">
+                    <!-- 海报内容快照 -->
+                    <div class="poster-inner">
+                        <div class="p-header">
+                            <h1 id="poster-p-code">GOAT</h1>
+                            <p id="poster-p-name">绿茵教父</p>
+                        </div>
+                        <div class="p-visual">
+                            <div class="p-tags">#信仰图腾 #战术大师</div>
+                        </div>
+                        <div class="p-desc-short">
+                            “既然认准了这抹颜色，这辈子就跟它死磕到底了。”
+                        </div>
+                        <div class="p-footer">
+                            <div class="qr-placeholder">QR</div>
+                            <div class="logo-placeholder">Zhibo8</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="poster-actions">
+                    <p>长按保存图片到相册</p>
+                    <button class="close-btn" id="close-poster">关闭</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 异常页 -->
+        <section id="error-page" class="page">
+            <div class="error-content">
+                <div class="error-icon">⚠️</div>
+                <h3 id="error-title">网络连接异常</h3>
+                <p id="error-desc">请检查你的网络设置后重试</p>
+                <button class="primary-btn" onclick="location.reload()">重试</button>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

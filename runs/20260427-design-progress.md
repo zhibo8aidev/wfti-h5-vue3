@@ -1,2 +1,4 @@
 - [2026-04-27 15:00] 启动设计阶段，完成 PRD 与 specs 研读。
 - [2026-04-27 15:05] 初始化 progress 文件。
+- [2026-04-27 15:10] 完成 artifacts/design.md 编写，明确视觉规范与交互规则。
+- [2026-04-27 15:20] 完成 HTML 高保真 mockups (landing, quiz, transition, result, poster, error)。
