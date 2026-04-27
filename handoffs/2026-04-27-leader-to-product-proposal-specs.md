@@ -7,11 +7,13 @@
 - Owner agent/session: `pending`
 - Approved inputs:
   - `artifacts/source-prd/user-brief.md`
+  - `artifacts/source-prd/question-bank.md`
 - New artifacts:
   - `artifacts/proposal.md`
   - `artifacts/specs/`
 - Related runs:
   - `runs/2026-04-27-leader-create-project-and-import-brief.md`
+  - `runs/2026-04-27-leader-import-question-bank.md`
 - Artifact origin assertion:
   项目已由 leader 创建，用户在群里提供了完整业务背景、页面功能、16 道题与人格算法规则，产品需基于该原始需求继续沉淀 proposal/specs。
 
@@ -27,4 +29,4 @@
 - 输出可进入 PRD 审核
 
 ## Summary
-新项目已创建，并已把用户原始需求导入为 source brief。下一步由 product 产出 proposal/specs。
+新项目已创建，并已把用户原始需求与完整 16 题题库导入为 source brief。下一步由 product 产出 proposal/specs。
