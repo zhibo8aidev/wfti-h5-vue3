@@ -5,7 +5,8 @@ current_stage: proposal_specs
 stage_status: in_progress
 source_inputs:
   idea: 开发一个手机端 Vue3 H5 活动，承接 2026 世界杯赛期流量，包含落地页、16 题答题页、2.5 秒结果计算过渡页、结果页、分享海报，前端完成人格算法并异步上报结果。
-  existing_prd: []
+  existing_prd:
+  - /home/chenhuiming/.openclaw/projects/wfti-h5-vue3/artifacts/source-prd/user-brief.md
   existing_design: []
   existing_repo: []
 available_artifacts:
@@ -28,8 +29,8 @@ repo_targets:
   client: /home/chenhuiming/.openclaw/projects/wfti-h5-vue3
   backend: /home/chenhuiming/.openclaw/projects/wfti-h5-vue3
 client_stack:
-  frontend: jetpack-compose
-  design_target: mobile-app
+  frontend: vue3
+  design_target: mobile-web
 github:
   owner: zhibo8aidev
   repo: wfti-h5-vue3
@@ -64,7 +65,7 @@ execution_policy:
     agent: codex
     method: acp_codex
     cwd: /home/chenhuiming/.openclaw/projects/wfti-h5-vue3
-    stack: jetpack-compose
+    stack: vue3
     follows:
     - proposal.md
     - specs/
@@ -81,7 +82,7 @@ execution_policy:
     - design.md
     - tasks.md
 next_actions:
-- Generate or import proposal.md and specs/
+- Generate proposal.md and specs/ from `artifacts/source-prd/user-brief.md`
 orchestration_mode: strong
 validation:
   required_handoffs:
