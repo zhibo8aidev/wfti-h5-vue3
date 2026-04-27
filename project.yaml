@@ -9,6 +9,7 @@ source_inputs:
   - /home/chenhuiming/.openclaw/projects/wfti-h5-vue3/artifacts/source-prd/user-brief.md
   - /home/chenhuiming/.openclaw/projects/wfti-h5-vue3/artifacts/source-prd/question-bank.md
   - /home/chenhuiming/.openclaw/projects/wfti-h5-vue3/artifacts/source-prd/persona-dataset.md
+  - /home/chenhuiming/.openclaw/projects/wfti-h5-vue3/artifacts/source-prd/algorithm-and-persona-canonical.md
   existing_design: []
   existing_repo: []
 available_artifacts:
